@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 
 const Shapes = () => {
   return (
-    <div className='row-span-1 row-start-1 -mt-9 aspect-square md:col-span-1 md:col-start-2 md:mt-0'>
+    <div className='row-span-1 row-start-1 -mt-9 aspect-square  md:col-span-1 md:col-start-2 md:mt-0'>
       <Canvas
         className='z-0'
         shadows
@@ -75,11 +75,7 @@ function Geometries() {
       geometry: new THREE.OctahedronGeometry(1.5), // Diamond
     },
   ];
-  const soundEffects = [
-    new Audio('../sounds/hit2.ogg'),
-    new Audio('../sounds/hit3.ogg'),
-    new Audio('../sounds/hit4.ogg'),
-  ];
+
   const materials = [
     new THREE.MeshNormalMaterial(),
     new THREE.MeshStandardMaterial({ color: 0x2ecc71, roughness: 0 }),
@@ -106,13 +102,12 @@ function Geometries() {
       position={position.map((p) => p * 2)}
       geometry={geometry}
       materials={materials}
-      soundEffects={soundEffects}
       r={r}
     />
   ));
 }
 
-function Geometry({ r, position, geometry, materials, soundEffects }) {
+function Geometry({ r, position, geometry, materials }) {
   const meshRef = useRef();
   const [visible, setVisible] = useState(false);
   const startingMaterial = getRandomMaterial();
@@ -123,9 +118,6 @@ function Geometry({ r, position, geometry, materials, soundEffects }) {
 
   function handleClick(e) {
     const mesh = e.object;
-
-    // const sound = gsap.utils.random(soundEffects);
-    // sound.play();
 
     gsap.to(mesh.rotation, {
       x: `+=${gsap.utils.random(0, 2)}`,
@@ -155,7 +147,7 @@ function Geometry({ r, position, geometry, materials, soundEffects }) {
         z: 0,
         duration: 1,
         ease: 'elastic.out(1,0.3)',
-        delay: 0.3,
+        // delay: 0.3,
       });
     });
     // Cleanup

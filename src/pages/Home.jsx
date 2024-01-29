@@ -40,9 +40,11 @@ const Home = () => {
           y: 0,
           opacity: 1,
           duration: 1,
+
           scale: 1,
           ease: 'elastic.out(1,0.3)',
-        }
+        },
+        '<1'
       );
     }, component);
     return () => ctx.revert();
@@ -76,7 +78,7 @@ const Home = () => {
           </h1>
           <span
             className='work block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500
-             bg-clip-text text-xl font-bold uppercase leading-8 tracking-[.2em]  text-transparent opacity-0 '
+             bg-clip-text text-md md:text-xl font-bold uppercase leading-8 tracking-[.2em]  text-transparent opacity-0 '
           >
             crafting a world where exceptional service adorns every smile.
           </span>
