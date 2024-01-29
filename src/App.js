@@ -10,8 +10,8 @@ function App() {
   return (
     <div className='  bg-slate-900  min-h-screen px-0 md:px-10'>
       <Header />
-      <div className='background-gradient absolute inset-0  max-h-screen' />
-      <div className="pointer-events-none absolute inset-0  h-full bg-[url('./noisetexture.jpg')] opacity-20 mix-blend-soft-light"></div>
+      {/* <div className='background-gradient absolute inset-0  max-h-screen' />
+      <div className="pointer-events-none absolute inset-0  h-full bg-[url('./noisetexture.jpg')] opacity-20 mix-blend-soft-light"></div> */}
 
       <Routes>
         <Route path='/' element={<Home />} />
