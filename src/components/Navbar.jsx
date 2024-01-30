@@ -62,7 +62,6 @@ const Navbar = () => {
                   className={clsx(
                     'group relative block overflow-hidden rounded px-3 text-xl font-bold text-slate-900 '
                   )}
-                  //   field={link}
                   onClick={() => setOpen(false)}
                   aria-current={pathname.includes(link) ? 'page' : undefined}
                 >
@@ -91,18 +90,18 @@ const Navbar = () => {
             <Button
               to='/contact'
               link='contact'
-              className='ml-3 text-xl'
-              onClick={() => setOpen(false)}
+              className='ml-3 text-xl z-50 bg-black'
+              setOpen={setOpen}
             />
           </li>
         </div>
-        <DesktopMenu pathname={pathname} links={links} />
+        <DesktopMenu pathname={pathname} links={links} setOpen={setOpen} />
       </ul>
     </nav>
   );
 };
 
-function DesktopMenu({ pathname, links }) {
+function DesktopMenu({ pathname, links, setOpen }) {
   return (
     <div className='relative z-50 hidden flex-row items-center gap-1 bg-transparent py-0 md:flex'>
       {links.map(({ to, link }, index) => (
@@ -113,12 +112,11 @@ function DesktopMenu({ pathname, links }) {
               className={clsx(
                 'group relative block overflow-hidden rounded px-3 py-1 text-base font-bold text-slate-900'
               )}
-              field={link}
               aria-current={pathname.includes(link) ? 'page' : undefined}
             >
               <span
                 className={clsx(
-                  'absolute inset-0 z-0 h-full rounded bg-pink-900/50  group-hover:bg-gradient-to-tr from-yellow-200 via-yellow-100 to-yellow-50 transition-transform  duration-300 ease-in-out group-hover:translate-y-0 ',
+                  'absolute inset-0 z-0 h-full rounded bg-pink-900/50   transition-transform  duration-300 ease-in-out group-hover:translate-y-0 ',
                   pathname.includes(link) ? 'translate-y-7' : 'translate-y-9 '
                 )}
               />
@@ -136,7 +134,12 @@ function DesktopMenu({ pathname, links }) {
         </React.Fragment>
       ))}
       <li>
-        <Button to='/contact' link='contact' className='ml-3' />
+        <Button
+          to='/contact'
+          link='contact'
+          className='ml-3'
+          setOpen={setOpen}
+        />
       </li>
     </div>
   );
