@@ -16,8 +16,8 @@ const ProductsList = ({ products }) => {
                 <span className='text-3xl font-bold'>{product.title}</span>
                 <div className='flex gap-3 text-yellow-400'></div>
               </div>
-              <span className='ml-auto flex items-center gap-2 text-xl font-medium md:ml-0'>
-                Read more <MdArrowOutward />
+              <span className='ml-auto flex items-center gap-2 text-xl font-medium md:ml-0 cursor-pointer'>
+                <MdArrowOutward />
               </span>
             </a>
           </li>
