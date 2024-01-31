@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { useLocation } from 'react-router-dom';
 import Button from './Button';
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -42,7 +43,9 @@ const Navbar = () => {
         </div>
         <div
           className={clsx(
-            'fixed bottom-0 left-0 right-0 top-14 z-50 flex flex-col h-72 ml-12 mr-1 rounded-xl items-end gap-4 bg-gray-50 pr-4  pt-10 transition-transform duration-300 ease-in-out md:hidden',
+            `fixed bottom-0 left-0 right-0 top-14 z-50 flex flex-col h-72  ${
+              !open ? 'mx-0' : 'ml-10 mr-1'
+            } rounded-xl items-end gap-4 bg-gray-50 pr-4  pt-10 transition-transform duration-300 ease-in-out md:hidden`,
             open ? 'translate-x-0 ' : 'translate-x-[100%] mx-0'
           )}
         >
