@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { NavLink } from 'react-router-dom';
 import { MdMenu, MdClose } from 'react-icons/md';
@@ -24,6 +24,17 @@ const Navbar = () => {
       link: 'services',
     },
   ];
+  useEffect(() => {
+    const closeNavbar = () => {
+      setOpen(false);
+    };
+
+    document.body.addEventListener('click', closeNavbar);
+
+    return () => {
+      document.body.removeEventListener('click', closeNavbar);
+    };
+  }, []);
   return (
     <nav aria-label='Main navigation'>
       <ul className='flex flex-col justify-between rounded-b-lg  bg-slate-50  px-4 py-2 md:m-4 md:flex-row md:items-center md:rounded-xl'>
@@ -36,7 +47,10 @@ const Navbar = () => {
             aria-expanded={open}
             aria-label='Open menu'
             className='block p-2 text-xl text-slate-800 md:hidden'
-            onClick={() => setOpen(!open)}
+            onClick={(event) => {
+              event.stopPropagation();
+              setOpen(!open);
+            }}
           >
             {!open ? <MdMenu /> : <MdClose />}
           </button>
