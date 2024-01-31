@@ -25,7 +25,7 @@ const Navbar = () => {
   ];
   return (
     <nav aria-label='Main navigation'>
-      <ul className='flex flex-col justify-between rounded-b-lg  bg-slate-50 px-4 py-2 md:m-4 md:flex-row md:items-center md:rounded-xl'>
+      <ul className='flex flex-col justify-between rounded-b-lg  bg-slate-50  px-4 py-2 md:m-4 md:flex-row md:items-center md:rounded-xl'>
         <div className='flex items-center justify-between  z-50'>
           <NavLink to='/' className='text-2xl font-bold ml-10 text-slate-900'>
             blueto
@@ -35,42 +35,42 @@ const Navbar = () => {
             aria-expanded={open}
             aria-label='Open menu'
             className='block p-2 text-xl text-slate-800 md:hidden'
-            onClick={() => setOpen(true)}
+            onClick={() => setOpen(!open)}
           >
-            <MdMenu />
+            {!open ? <MdMenu /> : <MdClose />}
           </button>
         </div>
         <div
           className={clsx(
-            'fixed bottom-0 left-0 right-0 top-0 z-50 flex flex-col items-end gap-4 bg-gray-50 pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden',
-            open ? 'translate-x-0' : 'translate-x-[100%]'
+            'fixed bottom-0 left-0 right-0 top-14 z-50 flex flex-col h-72 ml-12 mr-1 rounded-xl items-end gap-4 bg-gray-50 pr-4  pt-10 transition-transform duration-300 ease-in-out md:hidden',
+            open ? 'translate-x-0 ' : 'translate-x-[100%] mx-0'
           )}
         >
-          <button
+          {/* <button
             aria-label='Close menu'
             aria-expanded={open}
             className='fixed right-4 top-3 block p-2 text-2xl text-slate-800 md:hidden '
             onClick={() => setOpen(false)}
           >
             <MdClose />
-          </button>
+          </button> */}
           {links.map(({ to, link }, index) => (
             <React.Fragment key={link}>
-              <li className='first:mt-8 '>
+              <li className=' '>
                 <NavLink
                   to={to}
                   className={clsx(
-                    'group relative block overflow-hidden rounded px-3 text-xl font-bold text-slate-900 '
+                    'group relative block overflow-hidden rounded px-3 py-2 text-xl font-bold text-slate-900 '
                   )}
                   onClick={() => setOpen(false)}
                   aria-current={pathname.includes(link) ? 'page' : undefined}
                 >
                   <span
                     className={clsx(
-                      'absolute inset-0 z-0 h-full rounded bg-gradient-to-tr from-yellow-500/50 via-yellow-200/50 to-yellow-50/25 transition-transform  duration-300 ease-in-out group-hover:translate-y-0',
+                      'absolute inset-0 z-0 h-full rounded bg-pink-900/50  transition-transform  duration-300 ease-in-out group-hover:translate-y-0',
                       pathname.includes(link)
-                        ? 'translate-y-6'
-                        : 'translate-y-8'
+                        ? 'translate-y-10'
+                        : 'translate-y-12'
                     )}
                   />
                   <span className='relative'>{link}</span>
