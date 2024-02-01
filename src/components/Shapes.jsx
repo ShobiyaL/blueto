@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 
 import { ContactShadows, Float, Environment } from '@react-three/drei';
 import { gsap } from 'gsap';
+import CanvasLoader from './Loader';
 
 const Shapes = () => {
   return (
@@ -20,7 +21,7 @@ const Shapes = () => {
           far: 40,
         }}
       >
-        <Suspense fallback={null}>
+        <Suspense fallback={<CanvasLoader />}>
           <Geometries />
           <ContactShadows
             position={[0, -3.5, 0]}
