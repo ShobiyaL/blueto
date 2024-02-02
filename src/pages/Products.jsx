@@ -9,7 +9,7 @@ const Products = () => {
       <Heading size='xl' className='mb-8'>
         Our Products
       </Heading>
-      <div className='text-lg text-slate-300 mb-10'>
+      <div className='prose prose-xl prose-invert mb-10'>
         <p>
           Ready to take the plunge? Dive into a world of possibilities and
           explore our awesome products today!

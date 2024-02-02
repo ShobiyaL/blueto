@@ -9,7 +9,7 @@ const Company = () => {
         <Heading size='xl' className='col-start-1'>
           About Blueto
         </Heading>
-        <div className='text-slate-300 text-lg  col-start-1   '>
+        <div className='prose prose-xl prose-slate prose-invert col-start-1'>
           <p className='pb-7'>
             We are the change. Where innovation meets functionality. We are a
             team of skilled software freelancers dedicated to providing
