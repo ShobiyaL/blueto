@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Bounded from '../components/Bounded';
 import EarthCanvas from '../components/EarthCanvas';
+
 const Contact = () => {
   const [form, setForm] = useState({
     name: '',
@@ -9,12 +10,47 @@ const Contact = () => {
     message: '',
   });
   const [loading, setLoading] = useState(false);
-  const handleChange = (event) => {};
-  const handleSubmit = (event) => {};
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setForm({ ...form, [name]: value });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setLoading(true);
+    emailjs
+      .send(
+        'service_z41m4bq',
+        'template_n2q8mvi',
+        {
+          from_name: form.name,
+          to_name: 'Arullamudhane',
+          from_email: form.email,
+          to_email: 'lcarull33@gmail.com',
+          message: form.message,
+        },
+        'HQiJMRf2XAhnldRGX'
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert('Thank you. I will get back to you as soon as possible');
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert('Something went wrong');
+        }
+      );
+  };
   return (
     <Bounded>
       <div className=' flex lg:flex-row flex-col-reverse gap-7 overflow-hidden mx-auto '>
-        <div className='flex-[0.75]  p-8 rounded-lg bg-slate-100/75 shadow-lg z-40 ml-10'>
+        <div className='flex-[0.75]  p-8 rounded-lg bg-slate-100/75 shadow-lg z-40 ml-0 md:ml-10'>
           <p className='text-lg font-semibold'>Get in touch</p>
           <h1 className='text-4xl font-bold'>Contact</h1>
           <form onSubmit={handleSubmit} className='mt-10 flex flex-col gap-8 '>
@@ -55,7 +91,7 @@ const Contact = () => {
               type='submit'
               className='bg-white px-8 py-3 shadow-md w-fit font-bold rounded-md outline-none'
             >
-              {loading ? 'Sending' : 'Send'}
+              {loading ? 'Sending...' : 'Send'}
             </button>
           </form>
         </div>
