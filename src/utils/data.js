@@ -17,8 +17,7 @@ export const products = [
   },
   {
     title: 'ReviewApplication',
-    description:
-      ' A user-friendly review application facilitating seamless feedback collection and analysis. Empowering users to share and receive reviews on various products, services, or content, the app provides a centralized platform for transparent and constructive evaluations. With features for rating, commenting, and personalized user profiles, it fosters a community-driven environment where individuals can make informed decisions based on authentic and diverse reviews. The application aims to enhance user experiences by promoting trust, fostering collaboration, and offering valuable insights for continuous improvement.',
+    // description: ' ',
     image: reviewapp,
   },
 ];

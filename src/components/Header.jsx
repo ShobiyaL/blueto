@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 const Header = () => {
   return (
-    <header className='  top-0 z-50 mx-auto max-w-7xl md:sticky md:mt-7 '>
+    <header className='  top-0 z-50 mx-auto max-w-7xl md:sticky md:pt-10 '>
       <Navbar />
     </header>
   );
