@@ -9,7 +9,7 @@ const ProductsList = ({ products }) => {
   const lastMousePos = useRef({ x: 0, y: 0 });
   const [currentItem, setCurrentItem] = useState(null);
   const [hovering, setHovering] = useState(false);
-
+  console.log(products[2].description.length);
   useEffect(() => {
     // Animate list-items in with a stagger
     let ctx = gsap.context(() => {
@@ -89,7 +89,7 @@ const ProductsList = ({ products }) => {
     setCurrentItem(null);
   };
   return (
-    <div ref={component} className=''>
+    <div ref={component} className='min-h-screen'>
       <ul
         className='grid border-y border-y-slate-50/25'
         onMouseLeave={handleMouseLeave}
@@ -100,22 +100,22 @@ const ProductsList = ({ products }) => {
             className='list-item opacity-100 z-20 '
             onMouseEnter={() => handleMouseEnter(index)}
           >
-            <div className='flex flex-col justify-between  border-t border-t-slate-50/25 py-10  text-slate-200 md:flex-row '>
+            <div className='flex flex-col justify-between -z-10 border-t border-t-slate-50/25 py-10  text-slate-200 md:flex-row '>
               <div className='flex flex-col'>
                 <span className='text-2xl font-bold'>{product.title}</span>
-                <div className='flex flex-col md:flex-row gap-2 '>
-                  <div className=' prose prose-lg prose-stone font-bold mt-5   '>
-                    {product.description
+                <div className='flex flex-col md:flex-row gap-10 '>
+                  <div className=' prose prose-lg prose-stone  mt-5   '>
+                    {product.description.length > 0
                       ? product.description
                       : 'We are excited as you are. We will launch this soon..'}
                   </div>
-                  {/* <div>
+                  <div>
                     <img
                       src={product.image}
                       alt={product.title}
                       className='w-[470px] h-64 rounded-md'
                     />
-                  </div> */}
+                  </div>
                 </div>
               </div>
               <span className='ml-auto flex items-center gap-2 text-xl  font-medium md:mr-10 cursor-pointer z-20'>
