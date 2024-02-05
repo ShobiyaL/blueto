@@ -1,24 +1,23 @@
 import blog from '../images/blog-hosting-sites.jpg';
-import dashboard from '../images/Screenshot 2024-01-29 at 12.40.08 AM.png';
+import dashboard from '../images/dashboard.png';
 import reviewapp from '../images/appfollow.jpg';
 
 export const products = [
   {
     title: 'Blogging Application',
     description:
-      'Whether writing personal reflections, sharing expertise, or fostering discussions, the blogging app provides a dynamic space for individuals to connect and inspire through the art of storytelling.',
+      'A versatile blogging app that empowers users to effortlessly create, manage, and share their thoughts through customizable and visually engaging blog posts. With intuitive features for seamless content creation, collaboration, and audience interaction, the app offers a user-friendly platform for bloggers to express themselves, build a community, and explore diverse perspectives. Whether writing personal reflections, sharing expertise, or fostering discussions, the blogging app provides a dynamic space for individuals to connect and inspire through the art of storytelling.',
     image: blog,
   },
   {
     title: 'Monitoring Dashboard',
     description:
-      'A comprehensive monitoring dashboard that provides real-time insights and visualizations, enabling users to monitor key metrics, track system performance, and make informed decisions',
+      'A comprehensive monitoring dashboard that provides real-time insights and visualizations, enabling users to monitor key metrics, track system performance, and make informed decisions. With customizable widgets and intuitive data representation, the dashboard offers a centralized hub for overseeing diverse aspects of operations, from server health and application performance to user engagement. Streamlining the monitoring process, it empowers users to identify trends, detect anomalies, and proactively address issues, ensuring optimal functionality and performance across the monitored systems.',
     image: dashboard,
   },
   {
     title: 'ReviewApplication',
-    description:
-      ' A user-friendly review application facilitating seamless feedback collection and analysis. Empowering users to share and receive reviews on various products, services, or content, the app provides a centralized platform for transparent and constructive evaluations. With features for rating, commenting, and personalized user profiles, it fosters a community-driven environment where individuals can make informed decisions based on authentic and diverse reviews. The application aims to enhance user experiences by promoting trust, fostering collaboration, and offering valuable insights for continuous improvement.',
+    description: '',
     image: reviewapp,
   },
 ];
