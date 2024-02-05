@@ -6,7 +6,7 @@ const Company = () => {
   return (
     <Bounded>
       <div className='grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr] text-center md:text-start'>
-        <Heading size='xl' className='col-start-1'>
+        <Heading size='xl' className='col-start-1 pb-[3rem]'>
           About Blueto
         </Heading>
         <div className='prose prose-xl prose-slate prose-invert col-start-1'>
