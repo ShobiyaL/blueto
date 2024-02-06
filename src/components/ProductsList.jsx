@@ -119,7 +119,7 @@ const ProductsList = ({ products }) => {
                       alt={product.title}
                       className='w-full md:w-[470px] h-64 rounded-md'
                     />
-                    {product.title==='ReviewApplication' && <img className='absolute w-full md:w-[33vw]' src={ribbon} alt="gift ribbon"/>}
+                    {product.title==='ReviewApplication' && <img className='absolute w-[350px] md:w-[33vw] mx-auto' src={ribbon} alt="gift ribbon"/>}
                   </div>
                 </div>
               </div>
