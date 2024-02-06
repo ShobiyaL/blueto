@@ -72,7 +72,7 @@ const Services = () => {
           technological services.
         </p>
       </div>
-      <div className='mt-20 flex flex-wrap gap-20  justify-center items-center'>
+      <div className='mt-20 flex flex-wrap gap-20  '>
         {services.map((services, index) => (
           <ServiceCard key={index} {...services} ref={component} />
         ))}
