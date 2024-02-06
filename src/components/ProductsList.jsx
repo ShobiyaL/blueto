@@ -115,7 +115,7 @@ const ProductsList = ({ products }) => {
                       {product.title==='ReviewApplication' &&  <img className=' w-full md:w-[21vw]' src={gift} alt="Example GIF" /> }
                   
                   </div>
-                  <div className='flex justify-center items-center border-[1px] border-[solid] border-[#5b5b5b]'>
+                  <div className='flex relative justify-center items-center border-[1px] border-[solid] border-[#5b5b5b]'>
                     <img
                       src={product.image}
                       alt={product.title}
