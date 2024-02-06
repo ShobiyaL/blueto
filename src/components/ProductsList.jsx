@@ -110,7 +110,7 @@ const ProductsList = ({ products }) => {
                     {product.description.length > 0
                       ? product.description
                       : 'We are excited as you are. We will launch this soon..'}
-                      {product.title==='ReviewApplication' &&  <img className='w-[21vw]' src={gift} alt="Example GIF" /> }
+                      {product.title==='ReviewApplication' &&  <img className=' w-full md:w-[21vw]' src={gift} alt="Example GIF" /> }
                   
                   </div>
                   <div className='flex justify-center items-center border-[1px] border-[solid] border-[#5b5b5b]'>
@@ -119,7 +119,7 @@ const ProductsList = ({ products }) => {
                       alt={product.title}
                       className='w-full md:w-[470px] h-64 rounded-md'
                     />
-                    {product.title==='ReviewApplication' && <img className='absolute  w-[33vw]' src={ribbon} alt="gift ribbon"/>}
+                    {product.title==='ReviewApplication' && <img className='absolute w-full md:w-[33vw]' src={ribbon} alt="gift ribbon"/>}
                   </div>
                 </div>
               </div>
