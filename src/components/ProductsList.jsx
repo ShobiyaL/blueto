@@ -106,10 +106,12 @@ const ProductsList = ({ products }) => {
               <div className='flex flex-col'>
                 <span className='text-2xl font-bold [text-shadow:2px_2px_4px_#a09494]'>{product.title}</span>
                 <div className='flex flex-col md:flex-row gap-10 '>
-                  <div className=' prose prose-lg prose-stone  mt-5  text-yellow-500 w-full  md:w-1/2 mx-auto'>
+                  <div className=' prose prose-lg prose-stone  mt-5  text-yellow-500 w-full  md:w-2/3 mx-auto'>
+                    <p>
                     {product.description.length > 0
                       ? product.description
                       : 'We are excited as you are. We will launch this soon..'}
+                      </p>
                       {product.title==='ReviewApplication' &&  <img className=' w-full md:w-[21vw]' src={gift} alt="Example GIF" /> }
                   
                   </div>
