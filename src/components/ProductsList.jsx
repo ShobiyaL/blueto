@@ -9,7 +9,7 @@ const ProductsList = ({ products }) => {
   const lastMousePos = useRef({ x: 0, y: 0 });
   const [currentItem, setCurrentItem] = useState(null);
   const [hovering, setHovering] = useState(false);
-  console.log(products[2].description.length);
+  // console.log(products[2].description.length);
   useEffect(() => {
     // Animate list-items in with a stagger
     let ctx = gsap.context(() => {

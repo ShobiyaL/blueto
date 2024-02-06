@@ -21,3 +21,22 @@ export const products = [
     image: reviewapp,
   },
 ];
+
+export const services = [
+  {
+    title: 'Custom Software Development',
+  },
+  {
+    title: 'Web Development',
+  },
+  {
+    title: 'Mobile App Development',
+  },
+  {
+    title: 'Cloud Computing Services',
+  },
+
+  {
+    title: 'Maintenance and Support',
+  },
+];
