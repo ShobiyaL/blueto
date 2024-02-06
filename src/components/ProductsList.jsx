@@ -106,7 +106,7 @@ const ProductsList = ({ products }) => {
               <div className='flex flex-col'>
                 <span className='text-2xl font-bold [text-shadow:2px_2px_4px_#a09494]'>{product.title}</span>
                 <div className='flex flex-col md:flex-row gap-10 '>
-                  <div className=' prose prose-lg prose-stone  mt-5  text-yellow-500 w-[41vw]'>
+                  <div className=' prose prose-lg prose-stone  mt-5  text-yellow-500 w-full  md:w-1/2 mx-auto'>
                     {product.description.length > 0
                       ? product.description
                       : 'We are excited as you are. We will launch this soon..'}
@@ -117,7 +117,7 @@ const ProductsList = ({ products }) => {
                     <img
                       src={product.image}
                       alt={product.title}
-                      className='w-[470px] h-64 rounded-md'
+                      className='w-full md:w-[470px] h-64 rounded-md'
                     />
                     {product.title==='ReviewApplication' && <img className='absolute  w-[33vw]' src={ribbon} alt="gift ribbon"/>}
                   </div>
