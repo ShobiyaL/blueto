@@ -4,7 +4,7 @@ import Bounded from '../components/Bounded';
 import Shapes from '../components/Shapes';
 import HomeAbout from '../components/HomeAbout';
 import Features from '../components/Features';
-
+import { addon1 } from '../assets';
 const Home = () => {
   const component = useRef(null);
   useEffect(() => {
@@ -65,8 +65,8 @@ const Home = () => {
   // className='grid min-h-[70vh] grid-cols-1 md:grid-cols-3 items-center '
   // <div className='flex items-center justify-between'></div>;
   return (
-    <Bounded ref={component}>
-      <div className='grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center  '>
+    <Bounded ref={component} className='md:py-0 lg:py-0'>
+      <div className='grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center   relative md:py-0 lg:py-0 '>
         <Shapes />
         <div className='col-start-1 md:row-start-1'>
           <h1
@@ -91,6 +91,9 @@ const Home = () => {
       </div>
       <div>
         <div className='w-full h-0.5 bg-slate-500/50 '></div>
+        <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[60rem] md:bottom-[35rem]'>
+          <img src={addon1} alt='addon' />
+        </div>
 
         <HomeAbout />
         <Features />

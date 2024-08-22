@@ -1,12 +1,13 @@
 import { useGSAP } from '@gsap/react';
 import React, { useRef } from 'react';
 import { animateWithGsap } from '../utils/animation';
-import { explore1Img, explore2Img, exploreVideo } from '../utils';
+
 import gsap from 'gsap';
+import { dots } from '../assets';
 
 const Features = () => {
   useGSAP(() => {
-    animateWithGsap('.g_box', { rotation: 360, x: 200, duration: 1 });
+    animateWithGsap('.g_box', { rotation: 360, x: 100, duration: 1 });
     animateWithGsap('#features_title', { y: 0, opacity: 1 });
     animateWithGsap(
       '.g_grow',
@@ -28,8 +29,8 @@ const Features = () => {
   }, []);
 
   return (
-    <section className='h-full common-padding bg-zinc relative overflow-hidden '>
-      <div className='screen-max-wdith'>
+    <section className='h-full  bg-zinc relative overflow-hidden '>
+      <div className='screen-max-wdith '>
         <div className='mb-12 w-full'>
           <h1
             id='features_title'
@@ -77,15 +78,20 @@ const Features = () => {
                 ALL THE PROJECTS WILL BE KEPT AS SECRETS.
               </span>{' '}
             </p>
-            <div className='g_box w-64 h-64 border-2 flex items-center justify-center rounded-2xl'>
+
+            <div className='g_box  hidden md:flex w-36 h-40 md:w-64 md:h-64 border-2  items-center justify-center rounded-2xl'>
               <p className='text-center p-4 text-zinc-400 '>
-                <p className='italic text-slate-300 text-lg'>
+                <p className='italic text-slate-300 text-lg '>
                   Your Vision, Your Secret Your ideas
                 </p>{' '}
                 remain strictly confidential with us. We guarantee that your
                 intellectual property stays protected, so you can innovate with
                 peace of mind
               </p>
+            </div>
+            {/* sm:-top-[5rem] sm:-right-[10rem] */}
+            <div className='absolute   md:-bottom-[19rem] md:-right-[35rem]'>
+              <img src={dots} alt='addon' />
             </div>
           </div>
         </div>
