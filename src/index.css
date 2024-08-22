@@ -34,7 +34,7 @@ code {
     @apply flex items-center justify-center;
   }
   .feature-text {
-    @apply text-lg mx-32 my-10 md:text-xl font-semibold opacity-0 text-zinc-500; /* Standard Tailwind classes */
+    @apply text-lg mx-5 md:mx-32  my-10 md:text-xl font-semibold opacity-0 text-zinc-500; /* Standard Tailwind classes */
     transform: translateY(100px); /* Custom CSS for translation */
   }
 
