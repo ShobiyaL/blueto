@@ -5,58 +5,13 @@ import { service1, check } from '../assets';
 import { bluetoservices } from '../constants';
 
 const HomeAbout = () => {
-  const component = useRef(null);
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      const tl = gsap.timeline();
-
-      tl.fromTo(
-        '.work',
-        {
-          y: 20,
-          opacity: 0,
-          scale: 1.2,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-
-          scale: 1,
-          ease: 'elastic.out(1,0.3)',
-          hover: 'elastic.out(1,0.3)',
-        },
-        '<1'
-      );
-      // Hover effect
-      document.querySelectorAll('.work').forEach((element) => {
-        element.addEventListener('mouseenter', () => {
-          gsap.to(element, {
-            scale: 1.1,
-            ease: 'elastic.out(1, 0.3)',
-            duration: 0.5,
-          });
-        });
-
-        element.addEventListener('mouseleave', () => {
-          gsap.to(element, {
-            scale: 1,
-            ease: 'elastic.out(1, 0.3)',
-            duration: 0.5,
-          });
-        });
-      });
-    }, component);
-    return () => ctx.revert();
-  }, []);
   return (
     <Section id='how-to-use'>
       <div className='container '>
         <div className='max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center'>
           <h2
             className='h2 hover:work  tracking-widest   bg-gradient-to-tr from-yellow-700 via-yellow-200 to-yellow-700
-             bg-clip-text text-md md:text-3xl   leading-8 text-transparent opacity-1  font-bold'
-            ref={component}
+             bg-clip-text text-lg md:text-3xl   leading-8 text-transparent opacity-1  font-bold'
           >
             Blueto: Your Software Product Company
           </h2>
