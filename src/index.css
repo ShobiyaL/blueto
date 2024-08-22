@@ -29,3 +29,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .feature-text {
+    @apply text-lg mx-32 my-10 md:text-xl font-semibold opacity-0 text-zinc-500; /* Standard Tailwind classes */
+    transform: translateY(100px); /* Custom CSS for translation */
+  }
+
+  .feature-text-container {
+    @apply w-full flex justify-center items-center flex-col md:flex-row    mt-10 md:mt-16 gap-5;
+  }
+
+  .g_fadeIn {
+    @apply opacity-0; /* Standard Tailwind class */
+    transform: translateY(100px); /* Custom CSS for translation */
+  }
+}

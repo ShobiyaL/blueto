@@ -26,7 +26,7 @@ const ServiceCard = ({ title, component }) => {
       <div className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-md  service-card'>
         <div
           className='bg-slate-900 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly 
-          items-center flex-col bg-[#090f26] [box-shadow:-1px_-7px_11px_#42ced3]'
+          items-center flex-col '
         >
           <h3 className='text-white text-[20px] font-bold text-center'>
             {title}
@@ -54,9 +54,6 @@ const Services = () => {
 
     {
       title: 'Maintenance and Support',
-    },
-    {
-      title: 'IOT',
     },
   ];
 
