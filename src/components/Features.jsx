@@ -89,7 +89,7 @@ const Features = () => {
                 peace of mind
               </p>
             </div>
-            {/* sm:-top-[5rem] sm:-right-[10rem] */}
+
             <div className='absolute   md:-bottom-[19rem] md:-right-[35rem]'>
               <img src={dots} alt='addon' />
             </div>
