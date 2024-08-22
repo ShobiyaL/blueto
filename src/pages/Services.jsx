@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Bounded from '../components/Bounded';
 import Heading from '../components/Heading';
 import ServiceCard from '../components/ServiceCard';
-import { services } from '../utils/data';
+import { services } from '../constants';
 
 const Services = () => {
   const component = useRef(null);

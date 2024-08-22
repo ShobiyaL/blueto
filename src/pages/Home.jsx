@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Bounded from '../components/Bounded';
 import Shapes from '../components/Shapes';
+import HomeAbout from '../components/HomeAbout';
+import Features from '../components/Features';
 
 const Home = () => {
   const component = useRef(null);
@@ -60,9 +62,11 @@ const Home = () => {
       </span>
     ));
   };
+  // className='grid min-h-[70vh] grid-cols-1 md:grid-cols-3 items-center '
+  // <div className='flex items-center justify-between'></div>;
   return (
     <Bounded ref={component}>
-      <div className='grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center '>
+      <div className='grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center  '>
         <Shapes />
         <div className='col-start-1 md:row-start-1'>
           <h1
@@ -76,14 +80,20 @@ const Home = () => {
               {renderLetters('Tech.', 'last')}
             </span>
           </h1>
-          <span
+          {/* <span
             className='work block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500
              bg-clip-text text-md md:text-xl font-bold uppercase leading-8 tracking-[.2em]  text-transparent opacity-0 '
           >
             crafting a world where exceptional service adorns every smile.
-          </span>
+          </span> */}
           {/* <span className=' text-slate-300 text-xl'>managed by</span> */}
         </div>
+      </div>
+      <div>
+        <div className='w-full h-0.5 bg-slate-500/50 '></div>
+
+        <HomeAbout />
+        <Features />
       </div>
     </Bounded>
   );

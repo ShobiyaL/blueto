@@ -2,7 +2,7 @@ import React from 'react';
 import Bounded from '../components/Bounded';
 import Heading from '../components/Heading';
 import ProductsList from '../components/ProductsList';
-import { products } from '../utils/data';
+import { products } from '../constants';
 const Products = () => {
   return (
     <Bounded as='article'>

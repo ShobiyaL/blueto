@@ -1,3 +1,40 @@
+import {
+  benefitIcon1,
+  benefitIcon2,
+  benefitIcon3,
+  benefitIcon4,
+  benefitImage2,
+  chromecast,
+  disc02,
+  discord,
+  discordBlack,
+  facebook,
+  figma,
+  file02,
+  framer,
+  homeSmile,
+  instagram,
+  notification2,
+  notification3,
+  notification4,
+  notion,
+  photoshop,
+  plusSquare,
+  protopie,
+  raindrop,
+  recording01,
+  recording03,
+  roadmap1,
+  roadmap2,
+  roadmap3,
+  roadmap4,
+  searchMd,
+  slack,
+  sliders04,
+  telegram,
+  twitter,
+  yourlogo,
+} from '../assets';
 import blog from '../images/blog-hosting-sites.jpg';
 import dashboard from '../images/dashboard.png';
 import reviewapp from '../images/appfollow.jpg';
@@ -39,4 +76,17 @@ export const services = [
   {
     title: 'Maintenance and Support',
   },
+];
+export const bluetoservices = [
+  'Project under your control',
+  'Confedential',
+  'Seamless Integration',
+];
+
+export const brainwaveServicesIcons = [
+  recording03,
+  recording01,
+  disc02,
+  chromecast,
+  sliders04,
 ];
