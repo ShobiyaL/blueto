@@ -26,10 +26,22 @@ const Features = () => {
       ease: 'bounce.out',
       duration: 1,
     });
+    animateWithGsap('.g_line', {
+      y: 0,
+      opacity: 1,
+      ease: 'power2.inOut',
+      duration: 1,
+    });
   }, []);
 
   return (
     <section className='h-full  bg-zinc relative overflow-hidden '>
+      <div className='flex flex-col justify-center items-center mt-5 absolute right-0'>
+        <div className=' g_line w-1 sm:h-80 h-40 bg-gradient-to-b from-zinc-500  rounded-full translate-y-28' />
+      </div>
+      {/* <div className='flex flex-col justify-center items-center mt-5 absolute bottom-10 right-0'>
+        <div className=' g_line w-1 sm:h-80 h-40 bg-gradient-to-b from-zinc-100  rounded-full translate-y-28' />
+      </div> */}
       <div className='screen-max-wdith '>
         <div className='mb-12 w-full'>
           <h1

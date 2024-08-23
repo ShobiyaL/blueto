@@ -6,9 +6,10 @@ import { bluetoservices } from '../constants';
 
 const HomeAbout = () => {
   return (
+    // customPaddings={'pt-10 mt-0'}
     <Section id='how-to-use'>
       <div className='container '>
-        <div className='max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center'>
+        <div className='max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center  '>
           <h2
             className='h2 hover:work  tracking-widest   bg-gradient-to-tr from-yellow-700 via-yellow-200 to-yellow-700
              bg-clip-text text-lg md:text-3xl   leading-8 text-transparent opacity-1  font-bold'
@@ -17,7 +18,7 @@ const HomeAbout = () => {
           </h2>
         </div>
 
-        <div className='relative'>
+        <div className='relative '>
           <div className='relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-stone-700 rounded-3xl overflow-hidden lg:p-20 xl:h-[39rem]'>
             <div className='absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto '>
               <img
