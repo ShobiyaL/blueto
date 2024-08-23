@@ -65,11 +65,11 @@ const Home = () => {
 
   return (
     <Bounded ref={component} className='md:py-0 lg:py-0  '>
-      <div className='min-h-screen grid  grid-cols-1 md:grid-cols-2  items-center  md:-mt-36 md:mb-0  relative    '>
+      <div className='min-h-[80vh] md:min-h-screen grid  grid-cols-1 md:grid-cols-2  items-center  md:-mt-36 md:mb-0  relative    '>
         <Shapes />
-        <div className='col-start-1 md:row-start-1 '>
+        <div className='col-start-1 md:row-start-1 -mt-10 md:mt-0 '>
           <h1
-            className='mb-8  text-[clamp(3rem,20vmin,20rem)] font-extrabold leading-none '
+            className='mb-8  text-[clamp(3rem,20vmin,20rem)] font-extrabold leading-none mt-0 '
             aria-label={"blueto-tech"}
           >
             <span className='block text-slate-300 '>
@@ -80,7 +80,7 @@ const Home = () => {
             </span>
           </h1>
 
-          <span className='work  block   bg-gradient-to-tr from-yellow-700 via-yellow-200 to-yellow-700 bg-clip-text text-3xl font-semibold   text-transparent opacity-0 '>
+          <span className='work hidden md:block   bg-gradient-to-tr from-yellow-700 via-yellow-200 to-yellow-700 bg-clip-text text-xl font-semibold   text-transparent opacity-0 '>
             crafting a world where <b>exceptional services</b> adorns every
             smile
           </span>
@@ -89,8 +89,9 @@ const Home = () => {
 
       <div>
         <div className='w-full h-0.5 bg-slate-500/50 '></div>
-        <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[60rem] md:bottom-[35rem] '>
-          <img src={addon1} alt='addon' />
+        {/* -left-[20rem] bottom-[10rem] md:-left-[60rem] md:bottom-[35rem] */}
+        <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[62rem] md:bottom-[30rem] '>
+          <img src={addon1} alt='addon' className='' />
         </div>
 
         <HomeAbout />

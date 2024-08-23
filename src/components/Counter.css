@@ -1,0 +1,28 @@
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for centering */
+  }
+  
+  .counter {
+    font-size: 5rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #3498db; /* Adjust the color as needed */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+  }
+  
+  /* Optional: Add some keyframe animations if needed */
+  @keyframes counterAnimation {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  .counter {
+    animation: counterAnimation 2s ease-in-out infinite;
+  }
+  

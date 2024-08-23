@@ -8,7 +8,7 @@ import CanvasLoader from './Loader';
 
 const Shapes = () => {
   return (
-    <div className='flex  row-span-1 row-start-1 -mt-9 aspect-square   md:col-span-1 md:col-start-2 md:mt-0  '>
+    <div className='flex  row-span-1 row-start-1 -mt-10 aspect-square   md:col-span-1 md:col-start-2 md:mt-0   '>
       <Canvas
         className='z-0'
         shadows
