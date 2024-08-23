@@ -7,7 +7,12 @@ import { dots } from '../assets';
 
 const Features = () => {
   useGSAP(() => {
-    animateWithGsap('.g_box', { rotation: 360, x: 100, duration: 1 });
+    animateWithGsap(
+      '.g_box',
+      // { rotation: 360, x: 1, duration: 1,  }
+      { y: 0, scale: 1, opacity: 1, ease: 'power1' },
+      { scrub: 5.5 }
+    );
     animateWithGsap('#features_title', { y: 0, opacity: 1 });
     animateWithGsap(
       '.g_grow',
@@ -36,12 +41,8 @@ const Features = () => {
 
   return (
     <section className='h-full  bg-zinc relative overflow-hidden '>
-      <div className='flex flex-col justify-center items-center mt-5 absolute right-0'>
-        <div className=' g_line w-1  h-80 bg-gradient-to-b from-zinc-500  rounded-full translate-y-28' />
-      </div>
-      {/* <div className='flex flex-col justify-center items-center mt-5 absolute bottom-10 right-0'>
-        <div className=' g_line w-1 sm:h-80 h-40 bg-gradient-to-b from-zinc-100  rounded-full translate-y-28' />
-      </div> */}
+      <div className=' g_line w-1  h-80 bg-gradient-to-b from-zinc-500 mt-5 absolute right-0  rounded-full translate-y-28' />
+
       <div className='screen-max-wdith '>
         <div className='mb-12 w-full'>
           <h1
@@ -90,21 +91,32 @@ const Features = () => {
                 ALL THE PROJECTS WILL BE KEPT AS SECRETS.
               </span>{' '}
             </p>
-
-            <div className='g_box  hidden md:flex w-36 h-40 md:w-64 md:h-64 border-2  items-center justify-center rounded-2xl'>
-              <p className='text-center p-4 text-zinc-400 '>
-                <p className='italic text-slate-300 text-lg '>
-                  Your Vision, Your Secret Your ideas
-                </p>{' '}
-                remain strictly confidential with us. We guarantee that your
-                intellectual property stays protected, so you can innovate with
-                peace of mind
-              </p>
+            <div className=' md:flex flex-row items-center justify-around hidden mt-20'>
+              <div className='g_box   hidden md:flex w-36 h-40 md:w-64 md:h-64 border-2  items-center justify-center rounded-2xl '>
+                <p className='text-center p-4 text-zinc-400 '>
+                  <p className='italic text-slate-300 text-lg '>
+                    Your Vision, Your Secret Your ideas
+                  </p>{' '}
+                  remain strictly confidential with us. We guarantee that your
+                  intellectual property stays protected, so you can innovate
+                  with peace of mind
+                </p>
+              </div>
+              <div className='g_box  hidden md:flex w-36 h-40 md:w-64 md:h-64 border-2  items-center justify-center rounded-2xl'>
+                <p className='text-center p-4 text-zinc-400 '>
+                  <p className='italic text-slate-300 text-lg '>
+                    Your Vision, Your Secret Your ideas
+                  </p>{' '}
+                  remain strictly confidential with us. We guarantee that your
+                  intellectual property stays protected, so you can innovate
+                  with peace of mind
+                </p>
+              </div>
             </div>
 
-            <div className='absolute   md:-bottom-[19rem] md:-right-[35rem]'>
+            {/* <div className='absolute   md:-bottom-[19rem] md:-right-[35rem]'>
               <img src={dots} alt='addon' />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

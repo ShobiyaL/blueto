@@ -89,8 +89,9 @@ const Home = () => {
 
       <div>
         <div className='w-full h-0.5 bg-slate-500/50 '></div>
-        <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[60rem] md:bottom-[35rem] '>
-          <img src={addon1} alt='addon' />
+        {/* -left-[20rem] bottom-[10rem] md:-left-[60rem] md:bottom-[35rem] */}
+        <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[62rem] md:bottom-[30rem] '>
+          <img src={addon1} alt='addon' className='' />
         </div>
 
         <HomeAbout />
