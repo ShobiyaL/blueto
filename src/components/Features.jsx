@@ -37,7 +37,7 @@ const Features = () => {
   return (
     <section className='h-full  bg-zinc relative overflow-hidden '>
       <div className='flex flex-col justify-center items-center mt-5 absolute right-0'>
-        <div className=' g_line w-1 sm:h-80 h-40 bg-gradient-to-b from-zinc-500  rounded-full translate-y-28' />
+        <div className=' g_line w-1  h-80 bg-gradient-to-b from-zinc-500  rounded-full translate-y-28' />
       </div>
       {/* <div className='flex flex-col justify-center items-center mt-5 absolute bottom-10 right-0'>
         <div className=' g_line w-1 sm:h-80 h-40 bg-gradient-to-b from-zinc-100  rounded-full translate-y-28' />
