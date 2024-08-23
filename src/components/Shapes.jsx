@@ -8,7 +8,7 @@ import CanvasLoader from './Loader';
 
 const Shapes = () => {
   return (
-    <div className='flex  row-span-1 row-start-1 -mt-9 aspect-square  md:col-span-1 md:col-start-2 md:mt-0   '>
+    <div className='flex  row-span-1 row-start-1 -mt-9 aspect-square   md:col-span-1 md:col-start-2 md:mt-0  '>
       <Canvas
         className='z-0'
         shadows
@@ -40,32 +40,32 @@ const Shapes = () => {
 
 function Geometries() {
   const geometries = [
+    // {
+    //   position: [-0.8, 1, 5],
+    //   r: 0.4,
+    //   geometry: new THREE.PlaneGeometry(0.5, 0.5), // plane-1 left
+    // },
     {
-      position: [-0.8, 1, 5],
-      r: 0.4,
-      geometry: new THREE.PlaneGeometry(0.5, 0.5), // plane
-    },
-    {
-      position: [0, 0, 0],
+      position: [0, 0, 1],
       r: 0.3,
       geometry: new THREE.IcosahedronGeometry(3),
     },
-    {
-      position: [2, 3, -4],
-      r: 0.6,
-      geometry: new THREE.PlaneGeometry(0.5, 0.7), // plane
-    },
+    // {
+    //   position: [2, 3, -4],
+    //   r: 0.6,
+    //   geometry: new THREE.PlaneGeometry(0.5, 0.7), // plane
+    // },
 
     {
       position: [1, -0.75, 4],
       r: 0.4,
       geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16), // Pill
     },
-    {
-      position: [-1.4, 2, -4],
-      r: 0.6,
-      geometry: new THREE.PlaneGeometry(1, 1), // plane
-    },
+    // {
+    //   position: [-1.4, 2, -4],
+    //   r: 0.6,
+    //   geometry: new THREE.PlaneGeometry(1, 1), // plane
+    // },
     {
       position: [-0.8, -0.75, 5],
       r: 0.5,
@@ -75,6 +75,11 @@ function Geometries() {
       position: [1.6, 1.6, -4],
       r: 0.7,
       geometry: new THREE.OctahedronGeometry(1.5), // Diamond
+    },
+    {
+      position: [-1.5, 1, -1],
+      r: 0.7,
+      geometry: new THREE.DodecahedronGeometry(0.5), //
     },
   ];
 
