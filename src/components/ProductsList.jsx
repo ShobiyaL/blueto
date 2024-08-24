@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { IoIosArrowDropright } from 'react-icons/io';
 import gsap from 'gsap';
-import gift from '../images/gift.gif';
-import ribbon from '../images/ribbon.png';
 
 const ProductsList = ({ products }) => {
   const component = useRef(null);
@@ -104,34 +102,19 @@ const ProductsList = ({ products }) => {
           >
             <div className='flex flex-col justify-between -z-10 border-t border-t-slate-50/25 py-10  text-slate-200 md:flex-row '>
               <div className='flex flex-col'>
-                <span className='text-2xl font-bold text-shadow-[2px_2px_4px_#a09494]'>
-                  {product.title}
-                </span>
+                <span className='text-2xl font-bold'>{product.title}</span>
                 <div className='flex flex-col md:flex-row gap-10 '>
-                  <div className=' prose  prose-lg prose-stone mt-5  text-yellow-100 w-full  md:w-2/3 mx-auto'>
-                    <p>
-                      {product.description.length > 0
-                        ? product.description
-                        : 'We are excited as you are. We will launch this soon..'}
-                    </p>
-                    {product.title === 'ReviewApplication' && (
-                      <img className=' md:w-1/2' src={gift} alt='Example GIF' />
-                    )}
+                  <div className=' prose prose-lg prose-stone  mt-5   '>
+                    {product.description.length > 0
+                      ? product.description
+                      : 'We are excited as you are. We will launch this soon..'}
                   </div>
-                  <div className='flex relative justify-center items-center w-full md:w-[470px] border-[1px] border-[solid] border-[#5b5b5b] mx-auto'>
+                  <div>
                     <img
                       src={product.image}
                       alt={product.title}
-                      s
-                      className='w-full  h-64 rounded-md'
+                      className='w-[470px] h-64 rounded-md'
                     />
-                    {product.title === 'ReviewApplication' && (
-                      <img
-                        className='absolute  w-[350px] md:w-[33vw] mx-auto'
-                        src={ribbon}
-                        alt='gift ribbon'
-                      />
-                    )}
                   </div>
                 </div>
               </div>

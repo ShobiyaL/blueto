@@ -29,9 +29,8 @@ const Shapes = () => {
             scale={40}
             blur={1}
             far={9}
-            color={new THREE.Color(50 / 255, 50 / 255, 50 / 255)}
           />
-          <Environment preset='forest' />
+          <Environment preset='sunset' />
         </Suspense>
       </Canvas>
       {/* <div className='w-10 h-10 bg-white mt-32'></div> */}

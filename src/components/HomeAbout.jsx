@@ -1,8 +1,8 @@
-import { useRef, useEffect } from "react";
-import Section from "./Section";
-import gsap from "gsap";
-import { service1, check } from "../assets";
-import { bluetoservices } from "../constants";
+import { useRef, useEffect } from 'react';
+import Section from './Section';
+import gsap from 'gsap';
+import { service1, check } from '../assets';
+import { bluetoservices } from '../constants';
 
 const HomeAbout = () => {
   return (
@@ -11,9 +11,7 @@ const HomeAbout = () => {
       <div className='container '>
         <div className='max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center  '>
           <h2
-            className='h2 hover:work  tracking-widest   
-            
-            bg-gradient-to-r  from-purple-800 to-red-600 p-4 rounded-xl
+            className='h2 hover:work  tracking-widest   bg-gradient-to-tr from-yellow-700 via-yellow-200 to-yellow-700
              bg-clip-text text-lg md:text-3xl   leading-8 text-transparent opacity-1  font-bold'
           >
             Blueto: Your Software Product Company
@@ -31,24 +29,18 @@ const HomeAbout = () => {
                 src={service1}
               />
             </div>
-            {/* <div class='bg-gradient-to-r from-purple-800   to-black-400 p-4  rounded-xl'> */}
 
-            <div
-              className='relative z-1 max-w-[32rem] ml-auto prose prose-invert prose-slate prose-lg 
-            '
-            >
+            <div className='relative z-1 max-w-[32rem] ml-auto prose prose-invert prose-slate prose-lg'>
               {/* <p className='h4 mb-4 '>Blueto: Your Software Product Company</p> */}
               <p className='my-0  '>
-                <div class='bg-gradient-to-r from-purple-800 via-black-400  to-black-400 p-4  rounded-xl'>
-                  <blockquote class='border-l-4 border-blue-500 pl-4 italic text-white text-bold tracking-widest'>
-                    <span>At Blueto,</span> "you are not just a client—you are
-                    the CEO of your project."{" "}
-                  </blockquote>
-                </div>
+                <blockquote class='border-l-4 border-blue-500 pl-4 italic text-white text-bold tracking-widest'>
+                  <span>At Blueto,</span> "you are not just a client—you are the
+                  CEO of your project."{' '}
+                </blockquote>
               </p>
 
               <div className='prose prose-lg prose-invert '>
-                <p className='mt-9'>
+                <p className=''>
                   Transform your ideas into real-world applications with the
                   authority to make decisions and lead your project. You’ll
                   steer the direction while we manage the technical execution.
