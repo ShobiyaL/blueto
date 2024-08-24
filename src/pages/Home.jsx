@@ -5,6 +5,10 @@ import Shapes from "../components/Shapes";
 import HomeAbout from "../components/HomeAbout";
 import Features from "../components/Features";
 import { addon1 } from "../assets";
+import BGAnimation from "./BGAnimation";
+import BounceButton from "./BounceButton";
+import FlipCard from "./FlipCard";
+import SwingImage from "./SwingImage";
 const Home = () => {
   const component = useRef(null);
   useEffect(() => {
@@ -65,7 +69,7 @@ const Home = () => {
 
   return (
     <Bounded ref={component} className='md:py-0 lg:py-0  '>
-      <div className='min-h-[80vh] md:min-h-screen grid  grid-cols-1 md:grid-cols-2  items-center  md:-mt-36 md:mb-0  relative    '>
+      <div className='min-h-[50vh] max-h-[90vh] md:min-h-screen grid  grid-cols-1 md:grid-cols-2  items-center  md:-mt-36 md:mb-0  relative  '>
         <Shapes />
         <div className='col-start-1 md:row-start-1 -mt-10 md:mt-0 '>
           <h1
@@ -88,14 +92,21 @@ const Home = () => {
       </div>
 
       <div>
+        <BounceButton />
         <div className='w-full h-0.5 bg-slate-500/50 '></div>
         {/* -left-[20rem] bottom-[10rem] md:-left-[60rem] md:bottom-[35rem] */}
-        <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[62rem] md:bottom-[30rem] '>
+
+        {/* <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[62rem] md:bottom-[30rem] '>
           <img src={addon1} alt='addon' className='' />
-        </div>
+        </div> */}
+
+        {/* <svg class='animate-bounce w-6 h-6 ...'></svg> */}
 
         <HomeAbout />
         <Features />
+        <FlipCard />
+        {/* <BGAnimation /> */}
+        <SwingImage />
       </div>
     </Bounded>
   );
