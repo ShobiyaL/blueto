@@ -1,17 +1,21 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import Bounded from '../components/Bounded';
-import Shapes from '../components/Shapes';
-import HomeAbout from '../components/HomeAbout';
-import Features from '../components/Features';
-import { addon1 } from '../assets';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import Bounded from "../components/Bounded";
+import Shapes from "../components/Shapes";
+import HomeAbout from "../components/HomeAbout";
+import Features from "../components/Features";
+import { addon1 } from "../assets";
+import BGAnimation from "./BGAnimation";
+import BounceButton from "./BounceButton";
+import FlipCard from "./FlipCard";
+import SwingImage from "./SwingImage";
 const Home = () => {
   const component = useRef(null);
   useEffect(() => {
     let ctx = gsap.context(() => {
       const tl = gsap.timeline();
       tl.fromTo(
-        '.name-animation',
+        ".name-animation",
         {
           x: -100,
           opacity: 0,
@@ -21,18 +25,18 @@ const Home = () => {
           x: 0,
           opacity: 1,
           rotate: 0,
-          ease: 'elastic.out(1,0.3)',
+          ease: "elastic.out(1,0.3)",
           duration: 1,
-          transformOrigin: 'left top',
+          transformOrigin: "left top",
           delay: 0.5,
           stagger: {
             each: 0.1,
-            from: 'random',
+            from: "random",
           },
         }
       );
       tl.fromTo(
-        '.work',
+        ".work",
         {
           y: 20,
           opacity: 0,
@@ -44,16 +48,16 @@ const Home = () => {
           duration: 1,
 
           scale: 1,
-          ease: 'elastic.out(1,0.3)',
+          ease: "elastic.out(1,0.3)",
         },
-        '<1'
+        "<1"
       );
     }, component);
     return () => ctx.revert();
   }, []);
   const renderLetters = (name, key) => {
     if (!name) return;
-    return name.split('').map((letter, index) => (
+    return name.split("").map((letter, index) => (
       <span
         key={index}
         className={`name-animation name-animation-${key}-index inline-block opacity-0`}
@@ -65,18 +69,18 @@ const Home = () => {
 
   return (
     <Bounded ref={component} className='md:py-0 lg:py-0  '>
-      <div className='min-h-[80vh] md:min-h-screen grid  grid-cols-1 md:grid-cols-2  items-center  md:-mt-36 md:mb-0  relative    '>
+      <div className='min-h-[50vh] max-h-[90vh] md:min-h-screen grid  grid-cols-1 md:grid-cols-2  items-center  md:-mt-36 md:mb-0  relative  '>
         <Shapes />
         <div className='col-start-1 md:row-start-1 -mt-10 md:mt-0 '>
           <h1
             className='mb-8  text-[clamp(3rem,20vmin,20rem)] font-extrabold leading-none mt-0 '
-            aria-label={'blueto-tech'}
+            aria-label={"blueto-tech"}
           >
             <span className='block text-slate-300 '>
-              {renderLetters('Blueto', 'first')}
+              {renderLetters("Blueto", "first")}
             </span>
             <span className='-mt-[.2em] block  text-slate-500  '>
-              {renderLetters('Tech.', 'last')}
+              {renderLetters("Tech.", "last")}
             </span>
           </h1>
 
@@ -88,14 +92,21 @@ const Home = () => {
       </div>
 
       <div>
+        <BounceButton />
         <div className='w-full h-0.5 bg-slate-500/50 '></div>
         {/* -left-[20rem] bottom-[10rem] md:-left-[60rem] md:bottom-[35rem] */}
+
         <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[62rem] md:bottom-[30rem] '>
           <img src={addon1} alt='addon' className='' />
         </div>
 
+        {/* <svg class='animate-bounce w-6 h-6 ...'></svg> */}
+
         <HomeAbout />
         <Features />
+        <FlipCard />
+        {/* <BGAnimation /> */}
+        <SwingImage />
       </div>
     </Bounded>
   );

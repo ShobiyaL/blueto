@@ -32,7 +32,7 @@ export default function Footer() {
           </NavLink>
 
           <p className=' text-sm text-slate-300 '>
-            © {new Date().getFullYear()} blueto
+            © {new Date().getFullYear()} blueto tech pvt ltd
           </p>
         </div>
         <nav className='navigation' aria-label='Footer Navigation'>
