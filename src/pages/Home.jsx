@@ -96,9 +96,9 @@ const Home = () => {
         <div className='w-full h-0.5 bg-slate-500/50 '></div>
         {/* -left-[20rem] bottom-[10rem] md:-left-[60rem] md:bottom-[35rem] */}
 
-        {/* <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[62rem] md:bottom-[30rem] '>
+        <div className='absolute -left-[20rem] bottom-[10rem] md:-left-[62rem] md:bottom-[30rem] '>
           <img src={addon1} alt='addon' className='' />
-        </div> */}
+        </div>
 
         {/* <svg class='animate-bounce w-6 h-6 ...'></svg> */}
 
